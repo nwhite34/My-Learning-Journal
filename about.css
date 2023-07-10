@@ -1,6 +1,4 @@
-
-
-  *,
+ *,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -14,6 +12,12 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+.content-two {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
 
 article a{
     text-decoration: none; 
@@ -43,7 +47,8 @@ article a{
     text-decoration: none;
     position: relative;
     cursor: pointer;
-    padding-top: 1.25em;
+    
+   
 }
 
 #poop a::after {
@@ -74,9 +79,7 @@ article a{
     margin-right: -50px;
 }
 
-.home-lint {
-    margin-top: 0.5em;
-}
+
 
 .site-logo {
     width: 23.16px;
@@ -100,15 +103,56 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-.logo {
-    display: flex;
-    width: 140px;
-    top: 17px;
-    left: 20px;
-    cursor: pointer;
-    align-items: center;
+h2{
+font-family: Source Sans Pro;
+font-size: 2.25rem;
+font-weight: 700;
+line-height: 39px;
+letter-spacing: -0.03em;
+text-align: left;
+
 }
 
+h3{
+font-family: Source Sans Pro;
+font-size: 24px;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+margin-bottom: 10px;
+}
+
+p{
+    font-family: Source Sans Pro;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+
+.headertext{
+    font-family: Source Sans Pro;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+font-weight: 700;
+margin-bottom: -10px; /* Adjust the margin-bottom value to reduce spacing */
+
+}
+
+
+.smallerdiv p{
+    margin-left: 50px;
+    
+}
+
+.smallerdiv{
+    width: 75%;
+}
 a {
     margin-top: 16px;
     font-family: 'Source Sans 3', sans-serif;
@@ -159,7 +203,13 @@ a {
     word-wrap: break-word;
   
 }
-
+.article-img {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .article-img:hover {
+      transform: scale(1.02);
+    }
 
 .hamburger-menu {
     display: none !important;
@@ -193,11 +243,15 @@ a {
 }
 
 .container {
-    width: 90%;
-    max-width: 900px;
+   
+    max-width: 75%;
     padding-top: 1.5em;
-    margin: 0 auto;
 }
+
+.content.extra {
+  margin-top: -10px;
+}
+
 
 article {
     margin-bottom: 1em;
@@ -208,8 +262,10 @@ img {
 }
 
 .article-info {
+    display: block;
+    margin: -5px 0;
     text-transform: uppercase;
-}
+  }
 
 .article-img {
     margin-bottom: 1em;
@@ -225,6 +281,20 @@ img {
     margin-top: 0;
     margin-left: -1.125rem;
 }
+
+
+.article-preview, 
+.article-info {
+    font-weight: normal;
+    font-family: Source Sans Pro;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+color: #505050;
+}
+
 
 p {
     line-height: 1.3;
@@ -246,7 +316,7 @@ footer {
     letter-spacing: -0.03em;
     text-align: center;
     color: #ECECEC;
-    padding-top: 30px;
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -268,6 +338,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
+    padding-bottom: 60px;
 }
 
 
@@ -275,6 +346,7 @@ footer {
 .content h2 {
     padding: 5px 20px; /* Adjust the padding values as needed */
     margin: 0;
+    
 }
 
 h3{
@@ -284,25 +356,37 @@ h3{
 
 
 
-.image-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
 
 
 .image-container img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
 }
   
   
 
+
+@media (min-width: 600px) {
+.logo {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    padding-left: 10%;
+  }
+
+  #poop{
+
+    color: black;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    margin-right: 10%;
+  }
+
+}
 /* -------------------------------------------------------------------------------------------------- */
 @media (min-width: 400px) {
   .posts {
@@ -311,6 +395,16 @@ h3{
     flex-wrap: wrap;
     gap: 1em;
   }
+  
+  .logo {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+   
+  }
+
 
   .posts article {
     flex: 1 220px;
@@ -359,13 +453,7 @@ h3{
     font-family: 'Roboto', sans-serif;
   }
 
-  .logo {
-    display: flex;
-    width: 140px;
-    top: 17px;
-    left: 20px;
-  }
-
+ 
   a {
     margin-top: 16px;
     font-family: 'Source Sans 3', sans-serif;
@@ -439,6 +527,13 @@ h3{
         width: 100%;
     }
 
+    .logo {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+      }
+
     .nav-links.open {
         display: block;
         right: 0; /* Add this line to align the nav-links to the right */
@@ -502,7 +597,7 @@ h3{
         margin: auto;
         padding-right: 28px;
         cursor: pointer;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     .home-lint {
@@ -539,6 +634,7 @@ h3{
         justify-content: space-between;
         display: flex;
         margin-left: 40px;
+        margin: 0 100px;
     }
     
     .image-container img {
@@ -550,20 +646,20 @@ h3{
     
    .extra{
     margin-left: 20px;
+    padding-top: 20px;
    }
   
-    .container {
-        flex-direction: column;
-        margin-right: auto;
-      }
+   .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
     
-      .image-container {
-        margin-bottom: 20px;
-      }
+    
+
+
     }
-
-   
-
 
 
 /* -------------------------------------------------------------------------------------------------- */

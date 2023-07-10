@@ -2,6 +2,69 @@ var openMenu = document.getElementById('open-menu');
 var closeMenu = document.getElementById('close-menu');
 var navLinks = document.getElementById('nav-links');
 
+
+var openMenu = document.getElementById('open-menu');
+var closeMenu = document.getElementById('close-menu');
+var navLinks = document.getElementById('nav-links');
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  const imageUrl = params.get('image');
+
+  if (imageUrl) {
+    const articleImg = document.getElementById('article-img');
+    if (articleImg) {
+      articleImg.src = imageUrl;
+    }
+  } else if (!window.location.pathname.includes('page2.html')) {
+    // Call the function to update the existing article images
+    updateArticleImages();
+  }
+});
+
+openMenu.addEventListener('click', function() {
+  navLinks.classList.toggle('open');
+  openMenu.classList.toggle('open-menu-animation'); // Add this line for animation
+});
+
+closeMenu.addEventListener('click', function() {
+  navLinks.classList.remove('open');
+  openMenu.classList.remove('open-menu-animation'); // Add this line for animation
+});
+
+var viewMoreBtn = document.getElementById('view-more-btn');
+var additionalArticles = document.getElementById('additional-articles');
+var imageContainer = document.querySelector('.image-container'); // Added this line
+
+viewMoreBtn.addEventListener('click', function() {
+  additionalArticles.style.display = 'block';
+  viewMoreBtn.style.display = 'none';
+
+  // Call the function to append random images to image containers
+  appendRandomImages();
+});
+
+
+
+additionalArticles.addEventListener('click', function() {
+  var img = additionalArticles.querySelector('img');
+  if (img) {
+    var newImage = document.createElement('img');
+    newImage.classList.add('article-img1');
+    newImage.src = img.src;
+    newImage.alt = img.alt;
+
+    imageContainer.innerHTML = '';
+    imageContainer.appendChild(newImage);
+  }
+});
+
+
+
+
 openMenu.addEventListener('click', function() {
   navLinks.classList.toggle('open');
   openMenu.classList.toggle('open-menu-animation'); // Add this line for animation
@@ -20,15 +83,45 @@ viewMoreBtn.addEventListener('click', function() {
   viewMoreBtn.style.display = 'none';
 });
 
-async function getRandomImage() {
-  try {
-    const response = await fetch('https://source.unsplash.com/random');
-    return response.url;
-  } catch (error) {
-    console.error('Failed to fetch image:', error);
-    return null;
+
+
+additionalArticles.addEventListener('click', function() {
+  var img = additionalArticles.querySelector('img');
+  if (img) {
+    var newImage = document.createElement('img');
+    newImage.classList.add('article-img1');
+    newImage.src = img.src;
+    newImage.alt = img.alt;
+
+    imageContainer.innerHTML = '';
+    imageContainer.appendChild(newImage);
   }
-}
+});
+
+
+
+
+
+
+openMenu.addEventListener('click', function() {
+  navLinks.classList.toggle('open');
+  openMenu.classList.toggle('open-menu-animation'); // Add this line for animation
+});
+
+closeMenu.addEventListener('click', function() {
+  navLinks.classList.remove('open');
+  openMenu.classList.remove('open-menu-animation'); // Add this line for animation
+});
+
+var viewMoreBtn = document.getElementById('view-more-btn');
+var additionalArticles = document.getElementById('additional-articles');
+
+viewMoreBtn.addEventListener('click', function() {
+  additionalArticles.style.display = 'block';
+  viewMoreBtn.style.display = 'none';
+});
+
+
 
 // Function to append random images to image containers
 async function appendRandomImages() {
@@ -65,7 +158,19 @@ async function updateArticleImages() {
   }
 }
 
-// Call the function to update the existing article images
-updateArticleImages();
+
+
+additionalArticles.addEventListener('click', function() {
+  var img = additionalArticles.querySelector('img');
+  if (img) {
+    var newImage = document.createElement('img');
+    newImage.classList.add('article-img1');
+    newImage.src = img.src;
+    newImage.alt = img.alt;
+
+    imageContainer.innerHTML = '';
+    imageContainer.appendChild(newImage);
+  }
+});
 
 
