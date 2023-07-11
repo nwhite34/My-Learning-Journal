@@ -11,24 +11,73 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    
 }
+
+.container h2, 
+.container p,
+.container span{
+  
+  padding: 5px 0px;
+  
+  }
+
+  .container p{
+    padding-left: 20px;
+  }
+
 
 .home-lint,
 .about-lint {
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.home-lint a,
+.about-lint a {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 
   .hero-link {
     text-decoration: none; 
+    color: white;
   
 }
 .article-img {
   transition: transform 0.2s ease-in-out;
 }
 
+.article-img,
+.article-img1 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.article-img:hover,
+.article-img1:hover {
+    transform: scale(1.02);
+    opacity: 0.8;
+}
+
+
 .article-img:hover {
     transform: scale(1.02);
+    opacity: 0.8;
   }
 
 .article-info {
@@ -82,6 +131,7 @@ article a{
     line-height: 1rem;
     display: flex;
     align-items: center;
+    margin-top: -5PX;
 }
 
 #poop a:first-child {
@@ -94,7 +144,7 @@ article a{
     height: 23.16px;
     top: 17px;
     left: 20px;
-    margin: 5px;
+  
 
 }
 
@@ -131,7 +181,7 @@ a {
     letter-spacing: 0em;
     text-align: left;
     position: relative;
-    top: 80px;
+    top: 100px;
     color: white;
 }
 
@@ -155,7 +205,7 @@ h3{
 }
 
 
-.article-preview-hero {
+.article-preview-hero p {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -165,6 +215,7 @@ h3{
     margin-top: 28px;
     color: white;
     word-wrap: break-word;
+    padding: 50px;
   
 }
 
@@ -194,15 +245,14 @@ h3{
     padding: 20px;
     width: 100%;
     height: 293px;
-    background-color: aqua;
     background-image: url("/images/image1.png");
     background-size: cover;
     cursor: pointer;
 }
 
 .container {
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 75%;
     padding-top: 1.5em;
     margin: 0 auto;
 }
@@ -259,6 +309,7 @@ p {
     color: black;
     text-decoration: underline;
     margin: 15px;
+    margin-bottom: 100px;
     cursor: pointer;
   }
   
@@ -288,10 +339,7 @@ display: none;
 
 
 footer {
-    width: 414px;
-    height: 200px;
-    top: 1662px;
-    background-color: #202020;
+    margin-top: auto;
 }
 
 .footer-text {
@@ -325,7 +373,7 @@ footer {
         position: relative;
        
         display: flex;
-        padding-left: 10%;
+       
       }
     
       #poop{
@@ -335,7 +383,7 @@ footer {
         position: relative;
         cursor: pointer;
         display: flex;
-        margin-right: 10%;
+        
       }
     
     }
@@ -352,8 +400,8 @@ footer {
     .logo {
         color: black;
         text-decoration: none;
-        position: relative;
-        cursor: pointer;
+         display: flex;
+    align-items: center;
         display: flex;
        
       }
@@ -372,8 +420,8 @@ footer {
     }
 
     header {
-        width: 100%;
-        height: 49px;
+        width: 75%;
+        height: 89px;
         display: flex;
         justify-content: space-between;
     }
@@ -423,14 +471,21 @@ footer {
     }
 
     .hero-post {
-        width: 100%;
+        width: 75%;
         height: 293px;
-        background-color: aqua;
+    
         background-image: url("/images/image1.png");
         display: flex;
         flex-direction: column;
         background-size: cover;
+        transition: transform 0.3s, opacity 0.3s;
     }
+    
+    .hero-post:hover {
+        transform: scale(1.01);
+        opacity: 0.8;
+    }
+    
 
     p {
         padding-left: 20px;
@@ -438,7 +493,7 @@ footer {
     }
 
     footer {
-        width: 100%;
+        width: 75%;
         height: 100px;
         top: 1662px;
         background-color: #202020;
@@ -448,18 +503,22 @@ footer {
 }
 
 /* -------------------------------------------------------------------------------------------------- */
-@media (max-width: 400px) {
-    header {
-        width: 100%;
-        height: 49px;
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-    }
-
+@media (max-width: 532px) {
+ 
+   
     .article-preview-hero {
         overflow-wrap: break-word;
         width: 100%;
+    }
+
+    .hero-post {
+        width: 75%;
+        height: 293px;
+        
+        background-image: url("/images/image1.png");
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
     }
 
     .nav-links {
@@ -516,7 +575,7 @@ footer {
         margin: auto;
         padding-right: 28px;
         cursor: pointer;
-        margin-top: 20px;
+       margin-top: 45px;
     }
 
     .home-lint {
@@ -555,6 +614,8 @@ footer {
        
         display: flex;
       }
+
+   
     
 }
 
