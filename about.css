@@ -844,3 +844,24 @@ footer {
     }
 
 }
+
+
+@media (max-width: 525px) {
+    .article-preview-hero {
+        max-width: 600px;
+        word-wrap: break-word;
+        
+    }
+
+    .home-lint {
+        display: none;
+    }
+.hamburger-menu {
+    display: block !important;
+    margin: auto;
+    padding-right: 28px;
+    cursor: pointer;
+   margin-top: 45px;
+}
+    
+}
