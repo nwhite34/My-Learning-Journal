@@ -83,10 +83,11 @@ text-align: left;
 }
 
 .container {
-    display: flex;
-    align-items: center;
+    width: 100%;
+    max-width: 75%;
+    padding-top: 1.5em;
+    margin: 0 auto;
 }
-
 
 
 
@@ -619,23 +620,92 @@ footer {
 }
 
 /* -------------------------------------------------------------------------------------------------- */
-@media (max-width: 532px) {
+
  
    
-    .article-preview-hero {
-        overflow-wrap: break-word;
-        width: 100%;
-    }
+    @media (max-width: 391px) {
+ 
+        .containerpp{
+            margin-right: 70px;
+            width: 390px;
+            display: flex;
+             flex-direction: column;
+            
+         }
+     
+         .content {
+             display: flex;
+             flex-direction: column;
+             
+             width: 100%;
+             text-align: left;
+             padding: 10px;
+             margin-right:60px;
+            
+         }
+     
+     
+     
+         .containerpp p {
+             display: flex;
+             flex-direction: column;
+            
+             text-align: left;
+           }
 
-    .hero-post {
-        width: 75%;
-        height: 293px;
-        background-color: aqua;
-        background-image: url("/images/image1.png");
-        display: flex;
-        flex-direction: column;
-        background-size: cover;
-    }
+        .containerpp img{
+            display: block;
+      
+          margin-right: 200px;
+      
+        }
+
+        
+        .smallerdiv p{
+            text-align: left;
+         
+          margin: 0 auto;
+            padding: 10px;
+           
+            
+        }
+        .article-preview-hero {
+            overflow-wrap: break-word;
+            width: 100%;
+        }
+
+        .article-img{
+            padding: 10px;
+        }
+    
+        header {
+            width: 75%;
+            height: 89px;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .hero-link {
+            position: relative;
+            margin-top: -50px; /* Adjust this value as needed */
+            text-align: left;
+            
+        }
+    
+        .hero-link p {
+            padding: 0.9375rem 0;
+            
+        }
+    
+        .hero-post {
+            width: 75%;
+            height: 293px;
+            margin-top: 20px;
+            background-image: url("/images/image1.png");
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+        }
 
     .nav-links {
         position: absolute;
@@ -730,10 +800,27 @@ footer {
        
         display: flex;
       }
+      footer {
+        width: 75%;
+        height: 100px;
+        top: 1662px;
+        background-color: #202020;
+    }
 
-   
+    .container h2, 
+    .container p,
+    .container span{
+      
+        margin-left: 0;
+        margin-left: 0;
+        padding-left: 18px;
+ 
+    
+     
+      }
     
 }
+
 
 
 
