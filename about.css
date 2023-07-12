@@ -623,7 +623,7 @@ footer {
 
  
    
-    @media (max-width: 391px) {
+    @media  (max-width: 600px) { 
  
         .containerpp{
             margin-right: 70px;

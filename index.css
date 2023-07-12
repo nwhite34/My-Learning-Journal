@@ -389,7 +389,7 @@ footer {
     }
 
 /* -------------------------------------------------------------------------------------------------- */
-@media (min-width: 400px) {
+@media (min-width: 391px) {
     .posts {
         display: flex;
         justify-content: space-between;

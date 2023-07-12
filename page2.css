@@ -518,7 +518,29 @@ footer {
     }
 
 /* -------------------------------------------------------------------------------------------------- */
-@media (min-width: 400px) {
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 391px) {
+
+    .image-container img {
+        width: 75%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        padding-left: a;
+        object-position: center; /* Center the image within the container */
+    
+    
+      }
     .posts {
         display: flex;
         justify-content: space-between;
@@ -634,15 +656,101 @@ footer {
 /* -------------------------------------------------------------------------------------------------- */
 
 
-@media (max-width: 391px) {
-#poop{
-    display: none;
-}
+@media (min-width: 600px) {
 
-}
-@media (max-width: 400px) {
+    .content h2{
+       
+        margin-top: 20; /* Remove top margin */
+
+    }
+
+    .content .date{
+        margin-bottom: 0; /* Remove bottom margin */
+
+    }
+
+    .image-container{
+        display: flex;
+        flex-direction: column;
+      
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        margin: 0 auto;
+        
+    }
+
+    .smallerdiv p{
+        text-align: left;
+     
+      margin: 0 auto;
+        padding: 10px;
+       
+        
+    }
+    
+    .containerpp{
+        margin: 0 auto;
+    
+       display: flex;
+        flex-direction: column;
+       
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+       
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+
+
+    .containerpp p {
+        display: flex;
+        flex-direction: column;
+        
+        text-align: left;
+      }
+    
+      .image-container img {
+        width: 75%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        padding-left: a;
+        object-position: center; /* Center the image within the container */
+    
+    
+      }
+    .logo {
+        color: black;
+        text-decoration: none;
+        position: relative;
+       
+        display: flex;
+       
+      }
+    
+      #poop{
+    
+        color: black;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        
+      }
+    
+    }
+
+@media (max-width: 600px) {
 
  
+
+
     .image-container{
         display: flex;
         flex-direction: column;
@@ -668,9 +776,20 @@ footer {
         width: 100%;
         text-align: left;
         padding: 10px;
+
     }
 
 
+    .content h2{
+       
+        margin-top: 20; /* Remove top margin */
+
+    }
+
+    .content .date{
+        margin-bottom: 0; /* Remove bottom margin */
+
+    }
 
     .containerpp p {
         display: flex;
@@ -680,7 +799,7 @@ footer {
       }
     
       .image-container img {
-        width: 300px;
+        width: 75%;
         height: 100%;
         object-fit: cover;
         margin: 0 auto;
