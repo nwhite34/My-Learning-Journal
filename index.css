@@ -164,14 +164,7 @@ article a{
 }
 
 
-.site-logo {
-    width: 23.16px;
-    height: 23.16px;
-    top: 17px;
-    left: 20px;
-  
 
-}
 
 h1 {
     width: 113.75px;
@@ -451,14 +444,6 @@ footer {
         justify-content: space-between;
     }
 
-    .site-logo {
-        width: 23.16px;
-        height: 23.16px;
-        top: 17px;
-        left: 20px;
-        margin: 10px;
-    }
-
     .home-lint {
         color: white;
         padding-right: 100px;
@@ -528,7 +513,7 @@ footer {
 }
 
 /* -------------------------------------------------------------------------------------------------- */
-@media (max-width: 390px) {
+@media (max-width: 600px) {
  
    
  
