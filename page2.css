@@ -84,6 +84,11 @@ text-align: left;
     margin-top: 5px;
   }
 
+  .logo {
+    display: flex;
+    align-items: center;
+}
+
 .container {
     display: flex;
     align-items: center;
